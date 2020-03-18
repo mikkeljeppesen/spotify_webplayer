@@ -1,0 +1,61 @@
+.swal2-popup {
+  background-color: #2f2f2f;
+  border-radius: 0;
+  width: 40vw;
+  padding: 2vw 4vw;
+}
+
+.swal2-title {
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 2.5vw;
+}
+
+.swal2-html-container {
+  color: #8a8a8a;
+  font-size: 0.6vw;
+}
+
+.swal2-textarea {
+  background-color: #1f1f1f;
+  border: none;
+  border-radius: 0;
+  color: #cccccc;
+  font-size: 0.8vw;
+}
+
+.swal2-textarea:focus {
+  outline: none;
+}
+
+.swal2-styled.swal2-confirm {
+  font-size: 1vw;
+  margin: 0;
+  padding: 2rem 4rem;
+  transition: all 0.3s ease;
+  border-radius: 0;
+  background-color: #e8ae00;
+  border: 1px solid transparent;
+  color: #1f1f1f;
+}
+
+.swal2-confirm:hover {
+  background-color: #b98b00;
+  border-color: transparent;
+}
+
+.swal2-confirm:active {
+  background-color: #fec004;
+  outline: none;
+}
+
+.swal2-header {
+  overflow: hidden;
+}
+
+@media only screen and (min-device-width: 667px) {
+}
+
+@media screen and (min-device-width: 1200px) {
+}

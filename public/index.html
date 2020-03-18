@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="https://sdk.scdn.co/spotify-player.js"></script>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      //are you using spotify api aywhere else?
+      // i used it in the other project and i worked
+      window.onSpotifyWebPlaybackSDKReady = () => {
+        const token =
+          "BQCdyUcNr7rAooltYM_1Nqsq2c8ux1zszWYGuDcD1HX1seYpY1BQ-Ii42_u1NIGvYaBgVCzINr4xu0-j6hBQZkYoj9ffLbLC8eTBgCY6ZbKvjiWqWZR-DEFAoshxyShfGkzCPmx3pwJ04_v-HiLHu78mmjt0bDJoBwhX";
+        const player = new Spotify.Player({
+          name: "Web Playback SDK Quick Start Player",
+          getOAuthToken: cb => {
+            cb(token);
+          }
+        });
+        player.connect();
+      };
+    </script>
+  </body>
+</html>
